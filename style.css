@@ -1,0 +1,128 @@
+/* General reset for all elements */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: sans-serif; /* Uses sans-serif font for a clean look */
+    box-sizing: border-box; /* Ensures padding and border are included in element's width and height */
+}
+
+/* Container for centering the calculator */
+.container {
+    width: 100%; /* Takes up the full width of the viewport */
+    height: 100vh; /* Takes up the full height of the viewport */
+    background: #e3f9ff; /* Light blue background */
+    display: flex; /* Flexbox for centering contents */
+    align-items: center; /* Vertically center the calculator */
+    justify-content: center; /* Horizontally center the calculator */
+    padding: 20px; /* Padding around the calculator */
+}
+
+/* Main calculator box styling */
+.calculator {
+    background: #3a4452; /* Dark background color */
+    padding: 20px; /* Padding inside the calculator */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Takes full width of the container */
+    max-width: 400px; /* Restrict maximum width to 400px */
+}
+
+/* Display area of the calculator */
+form .display {
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-end; /* Align the display content to the right */
+    margin: 20px 0; /* Margin on top and bottom of the display */
+}
+
+/* Style for the display input */
+form .display input {
+    text-align: right; /* Align text to the right */
+    flex: 1; /* Take up all available space */
+    font-size: 45px; /* Larger font size for readability */
+    box-shadow: none; /* Remove any box shadow from the display input */
+}
+
+/* Styling for buttons */
+form input {
+    border: 0; /* Remove borders */
+    outline: 0; /* Remove focus outline */
+    width: 60px; /* Set width of buttons */
+    height: 60px; /* Set height of buttons */
+    border-radius: 10px; /* Rounded corners for buttons */
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), /* Light shadow for depth */
+                5px 5px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+    background: transparent; /* Transparent background for buttons */
+    font-size: 20px; /* Font size for button text */
+    color: #fff; /* White text for buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 10px; /* Margin around buttons */
+}
+
+/* Styling for operator buttons (e.g., +, -, *, /) */
+form input.operator {
+    color: #33ffd8; /* Greenish color for operator buttons */
+}
+
+/* Styling for equal button (=) */
+form input.equal {
+    width: 145px; /* Make the equal button wider */
+}
+
+/* Flexbox for button rows, ensures they are spaced correctly */
+div {
+    display: flex; /* Flexbox for button layout */
+    justify-content: space-between; /* Space out buttons evenly */
+    flex-wrap: wrap; /* Allow buttons to wrap onto a new line */
+}
+
+/* Ensures buttons are aligned in the grid with proper sizing */
+div input {
+    width: 22%; /* Set width of buttons relative to container */
+    height: 60px; /* Set height of buttons */
+    margin: 5px; /* Add some spacing between buttons */
+}
+
+/* Responsive adjustments for tablets and small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 15px; /* Adjust padding inside the calculator */
+    }
+
+    form .display input {
+        font-size: 35px; /* Slightly smaller font size for display */
+        padding: 10px; /* Adjust padding for display input */
+    }
+
+    /* Ensure button sizes stay consistent on smaller screens */
+    div input {
+        width: 60px; /* Set width of buttons */
+        height: 60px; /* Set height of buttons */
+        font-size: 20px; /* Slightly smaller font size for button text */
+    }
+
+    form input.equal {
+        width: 145px; /* Keep the equal button width the same */
+    }
+}
+
+/* Further responsive adjustments for smaller mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    form .display input {
+        font-size: 30px; /* Reduce font size for the display */
+        padding: 8px; /* Adjust padding for display input */
+    }
+
+    /* Ensure button sizes remain consistent for very small screens */
+    div input {
+        width: 60px; /* Set width of buttons */
+        height: 60px; /* Set height of buttons */
+        font-size: 18px; /* Smaller font size for buttons */
+    }
+
+    form input.equal {
+        width: 145px; /* Keep the equal button width consistent */
+    }
+}
