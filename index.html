@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for the webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Made By Parth Yendhe</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the calculator -->
+    <div class="container">
+        <!-- Calculator wrapper -->
+        <div class="calculator">
+            <!-- Form to hold calculator input and buttons -->
+            <form name="calcForm">
+                <!-- Display section to show input/output -->
+                <div class="display">
+                    <input type="text" name="display" readonly> <!-- Text input to display the result -->
+                </div>
+
+                <!-- Calculator buttons -->
+                <div class="buttons">
+                    <!-- Clear button (AC) to reset the display -->
+                    <input type="button" value="AC" onclick="calcForm.display.value = ''" class="operator">
+                    <!-- Delete button (DE) to remove last character -->
+                    <input type="button" value="DE" onclick="calcForm.display.value = calcForm.display.value.toString().slice(0, -1)" class="operator">
+                    <!-- Decimal point button (.) -->
+                    <input type="button" value="." onclick="calcForm.display.value += '.'" class="operator">
+                    <!-- Division button (/) -->
+                    <input type="button" value="/" onclick="calcForm.display.value += '/'" class="operator">
+
+                    <!-- Number buttons 7 to 9 -->
+                    <input type="button" value="7" onclick="calcForm.display.value += '7'">
+                    <input type="button" value="8" onclick="calcForm.display.value += '8'">
+                    <input type="button" value="9" onclick="calcForm.display.value += '9'">
+                    <!-- Multiplication button (*) -->
+                    <input type="button" value="*" onclick="calcForm.display.value += '*'" class="operator">
+
+                    <!-- Number buttons 4 to 6 -->
+                    <input type="button" value="4" onclick="calcForm.display.value += '4'">
+                    <input type="button" value="5" onclick="calcForm.display.value += '5'">
+                    <input type="button" value="6" onclick="calcForm.display.value += '6'">
+                    <!-- Subtraction button (-) -->
+                    <input type="button" value="-" onclick="calcForm.display.value += '-'" class="operator">
+
+                    <!-- Number buttons 1 to 3 -->
+                    <input type="button" value="1" onclick="calcForm.display.value += '1'">
+                    <input type="button" value="2" onclick="calcForm.display.value += '2'">
+                    <input type="button" value="3" onclick="calcForm.display.value += '3'">
+                    <!-- Addition button (+) -->
+                    <input type="button" value="+" onclick="calcForm.display.value += '+'" class="operator">
+
+                    <!-- Number button 00 -->
+                    <input type="button" value="00" onclick="calcForm.display.value += '00'">
+                    <!-- Number button 0 -->
+                    <input type="button" value="0" onclick="calcForm.display.value += '0'">
+                    <!-- Equal button (=) to evaluate the expression -->
+                    <input type="button" value="=" onclick="calcForm.display.value = eval(calcForm.display.value)" class="equal operator">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
